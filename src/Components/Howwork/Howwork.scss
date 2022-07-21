@@ -1,0 +1,48 @@
+.howwork{
+    // &__cards{
+    //     display: grid;
+    //     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    //     gap: 20px;
+    // }
+    &__card{
+        text-align: center;
+        margin: 0 10px;
+        cursor: pointer;
+        @include media(768){
+            margin-bottom: 30px;
+        }
+    }
+    &__logo{
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        margin-bottom: 24px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        @include media(768){
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &__cardtitle{
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        color: $maintextColor2;
+    }
+    &__cardtext{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 155%;
+        color: $maintextColor4;
+    }
+}
+
+
+
+
+
+  

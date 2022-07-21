@@ -1,0 +1,119 @@
+.courses{
+    background-color: $coursesBgColor;
+    padding: 60px 0;
+    .course{
+        text-align: center;
+        &__texts{
+            width: 60%;
+            @include media(768){
+                width: 100%;    
+            }
+        }
+        &__cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        &__card{
+            background-color: #ffff;
+            border-radius: 6px;
+            cursor: pointer;
+            overflow: hidden;
+            padding: 24px;
+            transition: .4s;
+            &:hover{
+                box-shadow: 0px 11px 35px rgba(0, 0, 0, 0.08);
+                transform: translateY(-10px);
+            }
+            @include media(768){
+                padding: 10px;
+            }
+            @include media(1024){
+                &:hover{
+                    box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.08);
+                    transform: translateY(0);
+                }
+            }
+        }
+        &__text{
+            text-align: left;
+        }
+        &__img{
+            border-radius: 6px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__connects{
+            padding: 24px 0;
+        }
+        &__woman{
+            @include flex(center, left);
+        }
+        &__left{
+            width: 32px;
+            height: 32px;
+            border:  0.6px solid $courseCardBorder;
+            border-radius: 50%;
+            @include flex(center, center);
+            transition: .4s;
+            &:hover{
+                background-color: $MainColor;
+                svg{
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+            margin-right: 18px;
+            @include media(768){
+                margin-right: 7px;
+            }
+        }
+        &__right{
+            font-weight: 400;
+            font-size: 16px;
+            color: $maintextColor4;
+        }
+        &__profil{
+            width: 32px;
+            height: 32px;
+            overflow: hidden;
+            border-radius: 50%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__devalop{
+            margin-bottom: 18px;
+            &-dev{
+                font-weight: 700;
+                font-size: 24px;
+                color: $maintextColor3;
+            }
+            &-price{
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 31px;
+                color: $MainColor;
+            }
+        }
+        &__text{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 155%;
+            color: $maintextColor4;
+        }
+        &__button{
+            width: 100%;
+        }
+        &__btn{
+            margin: auto;
+            margin-top: 64px;
+        }
+    }
+}

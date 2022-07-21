@@ -1,0 +1,63 @@
+
+.works{
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 11px 35px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 56px 88px;
+    transform: translateY(-96px);
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @include media(1024){
+        padding: 26px 16px;
+    }
+    @include media(768){
+        padding: 16px 44px;
+        transform: translateY(-130px);
+    } 
+    gap: 20px;
+    &__logo{
+        img{
+            width: 72px;
+            height: 72px;
+            @include media(768){
+                width: 46px;
+                height: 46px;
+            }
+        }
+    }
+    &__courses{
+        cursor: pointer;
+        @include flex(center, center);
+        @include media(768){
+            justify-content: left;
+        }
+    }
+    &__item{
+        margin-left: 24px;
+        
+    }
+    &__title{
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 47px;
+        color: $maintextColor1;
+        @include media(768){
+            margin-bottom: 3px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }   
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: $MainColor;
+        @include media(768){
+            font-size: 13px;
+        }
+    }
+}

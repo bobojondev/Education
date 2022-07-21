@@ -1,0 +1,100 @@
+.upcomings{
+    width: 100%;
+    .upcoming{
+        &__card{
+            width: 367px;
+            margin: 0 10px;
+            background: #FFFFFF;
+            box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.08);
+            border-radius: 6px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: .4s;
+            &:hover{
+                box-shadow: 0px 11px 35px rgba(0, 0, 0, 0.107);
+                transform: translateY(-10px);
+            }
+            @include media(1024){
+                &:hover{
+                    box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.08);
+                    transform: translateY(0);
+                }
+            }
+            text-align: left;
+        }
+        &__header{
+            position: relative;
+            width: 100%;
+            height: 50%;
+            img{
+                width: 100%;
+            }
+        }
+        &__dates{
+            padding: 8px 12px;
+            background-color: $MainColor;
+            width: 65px;
+            height: 62px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &__date{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+        }
+        &__dateText{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            color: #FFFFFF;
+        }
+        &__main{
+            padding: 24px;
+            padding-bottom: 28px;
+        }
+        &__title{
+            width: 80%;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            color: $maintextColor2;
+            margin-bottom: 23px;
+            @include media(700){
+                width: 100%;
+            }
+        }
+        &__hours{
+            @include flex(center, center);
+            img{
+                margin-right: 8px
+            }
+        }
+        &__hourText{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 155%;
+            color: $maintextColor4;
+            @include media(564){
+                font-size: 10px
+            }
+        }
+        &__maps{
+            @include flex(center, center);
+            img{
+                margin-right: 8px
+            }
+        }
+        &__mapText{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 155%;
+            color: $maintextColor4;
+            @include media(564){
+                font-size: 10px
+            }
+        } 
+    }
+}

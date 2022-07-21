@@ -1,0 +1,91 @@
+.student{
+    &__texts{
+        width: 56% !important;
+        @include media(768){
+            width: 100% !important;            
+        }
+    }
+    &__cards{
+        .swiper {
+            padding: 50px !important;
+            @include media(1024){
+                padding: 20px !important;
+            }
+            @include media(768){
+                padding: 0 !important ;
+            }
+        } 
+        .swiper-pagination{
+            display: none;
+        }
+    }
+    &__card{
+        background: #FFFFFF;
+        box-shadow: 0px 13px 45px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        overflow: hidden;
+        margin:  0 20px;
+        text-align: left;
+        padding: 30px 16px;
+        
+    }
+    &__header{
+        margin-bottom: 20px;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: $maintextColor4;
+    }
+    &__main{
+        @include flex(center, left);
+    }
+    &__img{
+        margin-right: 16px;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        @include media(768){
+            width: 52px;
+            height: 52px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__name{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        color: $maintextColor2;
+        margin-bottom: 8px;
+        @include media(768){
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+    }
+    &__typework{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 155%;
+        color: $maintextColor4;
+        @include media(768){
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.swiper-button-next{
+    @include media(768){
+        display: none !important;
+    }
+}
+.swiper-button-prev{
+    @include media(768){
+        display: none !important;
+    }
+}
+

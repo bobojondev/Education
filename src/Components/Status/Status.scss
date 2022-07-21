@@ -1,0 +1,37 @@
+.statuses{
+    width: 100%;
+    background-color: #D3E5FE;
+    .status{
+      padding: 72px 143px;
+      // @include flex(center, space-between);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 20px;
+      text-align: center;
+      @include media(1024){
+        padding: 42px 0;
+      }
+      &__num{
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 62px;
+          color: $maintextColor2;
+          margin-bottom: 16px;
+          @include media(768){
+            font-size: 30px;
+            line-height: 31px;
+            margin-bottom: 7px;
+          }
+      }
+      &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: $maintextColor4;
+        @include media(768){
+            font-size: 13px;
+            line-height: 134%;
+        }
+      }
+    }
+}

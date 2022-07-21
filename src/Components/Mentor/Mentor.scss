@@ -1,0 +1,89 @@
+.mentors{
+    width: 100%;
+   .mentor{
+    &__texts{
+        width: 60%;
+        @include media(1024){
+            width: 80%;
+        }
+        @include media(768){
+            width: 100%;
+        }
+    }
+    &__card{
+        width: 367px;
+        margin: 0 10px;
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 0px 11px 55px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+            box-shadow: 0px 11px 35px rgba(0, 0, 0, 0.197);
+            transform: translateY(-10px);
+        }
+        text-align: left;
+        @include media(1024){
+            &:hover{
+                box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.08);
+                transform: translateY(0);
+            }
+        }
+    }   
+    &__header{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &__head{
+        padding: 16px 32px;
+    }
+    &__name{
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        color: $maintextColor2;
+    }
+    &__profession{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: $maintextColor4;
+    }
+    &__footer {
+        padding: 0 32px;
+        margin-bottom: 40px;
+    }
+    &__left{
+        @include flex(center, center);
+        &-connect{
+            @include flex(center, center);
+            margin-right: 16px;
+            img{
+                margin-right: 6px;
+            }
+        }
+        &-count{
+            @include flex(center, center);
+            img{
+                margin-right: 6px;
+            }
+        }
+    }
+    &__fllows{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 155%;
+        color: $maintextColor4;
+    }
+    &__course{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 155%;
+        color: $maintextColor4;
+    }
+   }
+}

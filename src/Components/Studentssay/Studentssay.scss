@@ -1,0 +1,80 @@
+.studentssay{
+    padding: 0 105px;
+    width: 100%;
+    height: auto;
+    @include media(1024){
+        padding: 0;
+    }
+    &__main{
+        padding: 0 200px;
+        margin: auto;
+        background-color: $MainColor;
+        padding-top: 48px;
+        padding-bottom: 64px;
+        text-align: center;
+        border-radius: 6px;
+        @include media(1139){
+            padding: 0 50px;
+            padding-top: 48px;
+            padding-bottom: 64px;
+        }
+        @include media(768){
+            padding: 0 20px;
+            padding-top: 48px;
+            padding-bottom: 64px;
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 47px;
+        color: #fcfcfc;
+        margin-bottom: 12px;
+        @include media(578){
+            font-size: 24px;
+            line-height: 37px;
+            padding-bottom: 10px;
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: #f9f9f9;
+        margin-bottom: 40px;
+        @include media(768){
+            font-size: 13px;
+            line-height: 135%;
+            margin-bottom: 28px;
+        }
+    }
+    &__inputs{
+        padding: 8px 0;
+        padding-right: 8px;
+        padding-left: 20px;
+        background-color: #ffff;
+        border-radius: 4px;
+        input{
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+        }
+       @include media(768){
+            padding: 4px 0;
+            padding-right: 5px;
+            padding-left: 10px;
+            input{
+                font-size: 12px;
+            }
+        }
+    }
+    &__btn{
+        @include media(768){
+            padding: 7px 8px;
+            font-size: 12px;
+        }
+    }
+}

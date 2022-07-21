@@ -1,0 +1,98 @@
+.navbar{
+    padding-top: 40px;
+    padding-bottom: 32px;
+    @include media(768){
+        padding-top: 20px;
+        padding-bottom: 22px;
+        // heysgeg
+    }
+    &__list{
+        @include media(1024){
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 100vh;
+            text-align: center;
+            transform: translateX(100%);
+        }
+    }
+    &__pages{
+        @include flex(center, center);
+        @include media(1024){
+            flex-direction: column;
+        }
+    }
+    &__element{
+        position: relative;
+        &:not(:last-child){
+            margin-right: 40px;
+        }
+        @include media(1024){
+            margin: auto;
+            &:not(:last-child){
+                margin-right: 0;
+            }
+        }
+        a{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 155%;
+            color: $maintextColor1;
+            transition: .4s;
+            &:hover{
+                color: $MainColor;
+            }
+        }
+        .dropdown{
+            position: absolute;
+            left: -20px;
+            opacity: 0;
+            transition: .4s;
+            border: 1px solid rgba(233, 233, 233, 0.8);
+            border-radius: 4px;
+            overflow: hidden;
+            z-index: 10;
+            background-color: #fff;
+            transform: translateY(20%);
+            &__item{
+                padding: 10px 10px;
+                cursor: pointer;
+                transition: .4s;
+                &:hover{
+                    background-color: $MainColor;
+                    color: #fff;
+                }
+            }
+        }
+        &:hover .dropdown{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    &__connection{
+        @include flex(center, right);
+        &-signin{
+            background-color: #fff;
+            margin-right: 10px;
+            color: black;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 155%;
+            &:hover{
+                background-color: transparent;
+                text-decoration:underline;
+            }
+             @include media(768){
+                padding: 7px 20px;
+                font-size: 14px;
+            }
+        }
+        &-signup{
+            @include media(768){
+                padding: 7px 20px;
+                font-size: 14px;
+            }
+        }
+    }
+}

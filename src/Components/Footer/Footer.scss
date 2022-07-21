@@ -1,0 +1,122 @@
+.footertitle{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    color: $maintextColor2;
+    margin-bottom: 24px;
+}
+.footeres{
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background-color: $footerBg;
+}
+
+
+.footer{
+    &__main{
+        @include flex(top, space-between);
+        @include media(1024){
+            flex-direction: column;
+        }
+    }
+}
+
+        
+.education{
+    width: 30%;
+    @include media(1024){
+        width: 70%;
+        margin-bottom: 24px;
+    }
+    @include media(768){
+        width: 100%;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: $maintextColor4;
+        margin-bottom: 32px;
+    }
+    &__socialnetwork{
+        @include flex(center, left);
+        &-icon{
+            @include flex(center, center);
+            width: 48px;
+            height: 48px;
+            background: #FFFFFF;
+            border-radius: 4px;
+            margin-right: 16px;
+            cursor: pointer;
+            transition: .4s;
+            svg{
+                path{
+                    transition: .4s;
+                }
+            }
+            &:hover{
+                background-color: $MainColor;
+                svg{
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+.links{
+    &__lists{
+        &-text{
+            margin-bottom: 20px;
+            .items{
+                @include flex(center, left);
+                &__link{
+                    margin-left: 10px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: $blogTextColor;
+                    transition: .4s;
+                }
+                &:hover{
+                    .items__link{
+                        margin-left: 15px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    @include media(1024){
+        width: 70%;
+    }
+    @include media(768){
+        width: 80%;
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 155%;
+        color: $maintextColor4;
+        width: 70%;
+        margin-bottom: 16px;
+        @include media(768){
+            width: 100%;
+        }
+    }
+    &__email{
+        &-item{
+            @include flex(center, left);
+            margin-bottom: 10px;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+}
